@@ -1,1 +1,31 @@
 
+# title: website name
+
+# tag:
+# - s1
+# - s2
+# - s3
+
+# address:
+# street: MG Road
+# city: BLR
+# state: KA
+
+# value: ${{ env.VALUE}}
+
+# variable: ${{ github.VARIABLE_NAME}}
+
+name: Github action ofr
+on:
+push:
+     branches: [main]
+     jobs:
+     build:
+     runs-on: windows-latest
+     steps:
+     - uses: actions/checkout@v3
+     - name: Print node version
+     run: node --version
+     - name: Print NPM version
+     run: npm --version
+     - name: Print pwd
